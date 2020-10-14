@@ -6,14 +6,15 @@ import Login from '../screens/Login';
 import Main from '../screens/MainScreen';
 import Drawer from './Drawer';
 import {setToken} from '../redux/actions';
-
+import ChatScreen from '../screens/ChatScreen'
+import DishScreen from '../screens/DishScreen';
 const Stack = createStackNavigator();
 
 const AppNavigation = () =>{
     const store = useSelector(state=>state);
     // const dispatch = useDispatch();
     const token = store.reducer;
-    // console.log('token', token); 
+    console.log('token', token); 
     // dispatch(setToken('user'))
 
     return(
@@ -21,7 +22,6 @@ const AppNavigation = () =>{
             <Stack.Navigator screenOptions={{headerShown:false}}>
                 {token===null?
                 <Stack.Screen name= 'Login' component={Login}/>:
-                // <Stack.Screen name= 'Main' component = {Main}/>
                 <Stack.Screen name = 'Drawer' component = {Drawer}/>
                 }
             </Stack.Navigator>

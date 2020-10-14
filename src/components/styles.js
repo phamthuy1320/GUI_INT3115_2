@@ -21,7 +21,9 @@ const styles = StyleSheet.create({
         backgroundColor:'#7fe5f0',
         borderRadius:25,
         padding:10,
-        marginBottom:10
+        marginBottom:10,
+        flexDirection:'row',
+        justifyContent:'center'
     },
     button:{
         color:'#fff',

@@ -1,4 +1,3 @@
-import { REMOVE_TOKEN, SET_TOKEN } from '../ActionTypes';
 import * as ActionTypes from '../ActionTypes';
 
 export function setToken(user){

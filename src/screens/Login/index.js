@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
+import React, {useState, useCallback} from 'react';
 import {View, Text} from 'react-native';
 import styles from './styles';
 import {Input, Button} from '../../components';
 import {setToken} from '../../redux/actions';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 
 const BRAND = 'NiceFood'
 
@@ -14,8 +14,9 @@ export default function Login (){
     // const clear = ()=>{
     //     setUser(null);
     //     setPassword(null)
-    // }
-
+    // // }
+    // const store = useSelector(state=>state);
+    // const token = store.reducer;
     const dispatch=useDispatch();
     return (
         <View style = {styles.container}>
@@ -30,10 +31,10 @@ export default function Login (){
             </View> */}
             <View style = {styles.buttonContainer}>
                 {/* <Text onPress = {clear} style = {styles.clear}>Clear</Text> */}
-                <Button onPress = {dispatch(setToken('jkg'))} 
+                <Button onPress = {()=>dispatch(setToken('hgks'))} 
                     title ='LOGIN WITH PHONE NUMBER'
                 />
-                <Button onPress = {dispatch(setToken('jkg'))}  title ='LOGIN WITH GMAIL'
+                <Button onPress = {()=>dispatch(setToken('gfdg'))}  title ='LOGIN WITH GMAIL'
                     backgroundColor = '#ff7373'
                 />
             </View>

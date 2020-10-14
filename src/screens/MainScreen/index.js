@@ -37,7 +37,7 @@ const ItemRestaurant = (props) =>{
     const navigation=useNavigation()
     return(
     <View style = {iStyles.itemContainer}>
-        <TouchableOpacity style = {iStyles.imgRestautant} onPress={()=>navigation.navigate('Detail')}/>
+        <TouchableOpacity style = {iStyles.imgRestautant} onPress={()=>navigation.navigate('Detail', {name:props?.name, address:props?.address})}/>
         <Text style = {iStyles.name}>{props?.name}</Text>
         <Text style = {iStyles.address}>{props?.address}</Text>
     </View>)
@@ -60,7 +60,8 @@ export default function Main({navigation}){
     return (
         <>
         <Header 
-            left = {<Entypo name = 'menu' size={22} onPress={()=>navigation.openDrawer()}/>}
+            left = {<Entypo name = 'menu' size={22} 
+                onPress={()=>navigation.openDrawer()}/>}
             right = {<Entypo name = 'dots-three-vertical' size={22}/>}
             title = 'Restaurant'
         />
