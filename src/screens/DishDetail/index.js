@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import {View, Text, TouchableOpacity,ScrollView,Animated,Dimensions,StyleSheet} from 'react-native';
 import Entypo from 'react-native-vector-icons/Entypo';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
+import Ionicons from 'react-native-vector-icons/Ionicons'
 import styles from './styles';
 import {Header,Button} from '../../components';
 const HEIGHT = Dimensions.get('screen').height
@@ -68,8 +69,10 @@ export default function DishDetail({navigation}){
     return(
         <View style = {styles.container}>
             <Header
-                left={<Entypo name='menu' size={22} 
-                onPress={()=>navigation.openDrawer()}/>}
+                // left={<Entypo name='menu' size={22} 
+                // onPress={()=>navigation.openDrawer()}/>}
+                left={<Ionicons name='arrow-back' size={22} 
+                onPress={()=>navigation.goBack()}/>}
                 right={<View/>}
                 title='Dish Description'
             />

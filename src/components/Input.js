@@ -6,7 +6,11 @@ export default function Input(props){
     const [alert, setAlert] = useState(null);
     useEffect(
         ()=>{
-            props.value===''?setAlert(props.alert):setAlert(null)
+            props?.value===''?setAlert(props?.alert):
+            props?.type=='phone'&&JSON.stringify(props?.value).length!=12?setAlert(props?.alert):
+            props?.type=='code'?setAlert(props?.alert):
+            setAlert(null)
+            
         }
     )
     return(

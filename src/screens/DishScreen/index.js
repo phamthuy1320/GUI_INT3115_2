@@ -3,6 +3,7 @@ import {View, Text, FlatList, Image,TouchableOpacity} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import Entypo from 'react-native-vector-icons/Entypo';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 import {Header} from '../../components';
 import styles from './styles';
 import { random,range } from 'lodash';
@@ -83,7 +84,9 @@ export default function DishScreen({navigation}){
     return(
         <View style = {styles.container}>
             <Header
-                left = {<Entypo name = 'menu' size={22} onPress = {()=>navigation.openDrawer()}/>}
+                // left = {<Entypo name = 'menu' size={22} onPress = {()=>navigation.openDrawer()}/>}
+                left={<Ionicons name='arrow-back' size={22} 
+                    onPress={()=>navigation.goBack()}/>}
                 right = {<Entypo name = 'dots-three-vertical' size={22}/>}
                 title = 'DISH'
             />

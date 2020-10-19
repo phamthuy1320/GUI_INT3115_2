@@ -34,9 +34,9 @@ const styles = StyleSheet.create({
         flexDirection:'row',
         paddingVertical:20,
         paddingHorizontal:10,
-        backgroundColor:'#fff',
         borderBottomColor:'#cacbd3',
         borderBottomWidth:1,
+        elevation:1
 
     },
     titleHeader:{

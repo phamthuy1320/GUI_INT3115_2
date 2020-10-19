@@ -6,6 +6,12 @@ import {
     StyleSheet, 
     Dimensions} from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
+
 const HEIGHT = Dimensions.get('window').height;
 const Button = (props) =>{
     return(
@@ -26,23 +32,23 @@ export default function DrawerContent({navigation}){
             <Button 
                 title='Restaurant' 
                 onPress = {()=>navigation.navigate('Main')}
-                element = {<Icon name = 'logout' size = {22}/> }
+                element = {<Ionicons name = 'restaurant-outline' size = {22}/> }
             />
             <Button 
                 title='Categories' 
                 onPress = {()=>navigation.navigate('Cate')}
-                element = {<Icon name = 'logout' size = {22}/> }
-            />
-            <Button 
-                title='Dish' 
-                onPress = {()=>navigation.navigate('Dish')}
-                element = {<Icon name = 'logout' size = {22}/> }
+                element = {<MaterialIcons name = 'category' size = {22}/> }
             />
             {/* <Button 
-                title='Chat' 
-                onPress = {()=>navigation.navigate('Chat')}
-                element = {<Icon name = 'logout' size = {22}/> }
+                title='Dish' 
+                onPress = {()=>navigation.navigate('Dish')}
+                element = {<MaterialCommunityIcons name = 'food' size = {22}/> }
             /> */}
+            <Button 
+                title='Setting Profile' 
+                onPress = {()=>navigation.navigate('Set')}
+                element = {<AntDesign name = 'setting' size = {22}/> }
+            />
             <Button 
                 title='Log out' 
                 onPress = {()=>navigation.navigate('Logout')}
@@ -68,7 +74,7 @@ const styles = StyleSheet.create({
         borderRadius:90,
         borderWidth:5,
         borderColor:'#fff',
-        marginBottom:20,
+        marginBottom:10,
         marginHorizontal:10
     },
     name:{

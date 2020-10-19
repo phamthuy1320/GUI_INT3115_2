@@ -4,9 +4,9 @@ import styles from './styles';
 
 export default function Header(props){
     return(
-        <View style={styles.headerContainer}>
+        <View style={[styles.headerContainer,{backgroundColor:props?.backgroundColor||'#fff'}]}>
             {props?.left}
-            <Text style = {styles.titleHeader}>{props?.title||'header'}</Text>
+            <Text style = {[styles.titleHeader,{color:props?.color||'#000'}]}>{props?.title||'header'}</Text>
             {props?.right}
         </View>
     )

@@ -24,8 +24,13 @@ const styles = StyleSheet.create({
     logo:{
         height:LOGO_HEIGHT,
         width:LOGO_WIDTH,
-        backgroundColor:'#bada55',
+        // backgroundColor:'#bada55',
+        backgroundColor:'#fff',
         alignSelf:'center'
+    },
+    note:{
+        color:'#62cfde',
+        textAlign:'center'
     },
     brand:{
         fontSize:BRAND_SIZE,
@@ -38,11 +43,18 @@ const styles = StyleSheet.create({
 
     },
     clear:{
+        color:'lightblue',
+        textDecorationLine:'underline',
         alignSelf:'flex-end',
-        color:'#92a0f2',
+        marginBottom: 10
     },
     buttonContainer:{
         flex:1
     },
+    cancel:{
+        textAlign:'center',
+        color:'#9f9c90',
+        textDecorationLine:'underline'
+    }
 });
 export default styles;
