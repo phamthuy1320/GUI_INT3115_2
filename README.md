@@ -3,7 +3,7 @@
 # Demo UI
 * Login Screen
 
-![Login](./src/assets/Login.PNG)
+![Login](./src/assets/ogin.PNG)
 
 * Categories Screen
 
